@@ -133,7 +133,6 @@ export default defineConfig(async ({ mode }) => ({
         navigateFallbackAllowlist: [/./]
       }
     }),
-    expressPlugin()
   ].filter(Boolean),
   resolve: {
     alias: {
