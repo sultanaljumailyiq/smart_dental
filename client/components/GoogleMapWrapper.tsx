@@ -86,7 +86,7 @@ export default function GoogleMapWrapper({
   // If no API key, show placeholder
   if (!API_KEY) {
     return (
-      <div 
+      <div
         className="w-full bg-gray-100 rounded-lg flex items-center justify-center flex-col gap-3"
         style={{ height }}
       >
@@ -99,9 +99,91 @@ export default function GoogleMapWrapper({
     );
   }
 
+  // Load Google Maps script and detect load errors (e.g., ApiProjectMapError)
+  const [loadStatus, setLoadStatus] = React.useState<'idle'|'loading'|'ready'|'error'>('idle');
+  const [loadError, setLoadError] = React.useState<string | null>(null);
+
+  React.useEffect(() => {
+    let cancelled = false;
+    if (typeof window === 'undefined') return;
+    if ((window as any).google && (window as any).google.maps) {
+      setLoadStatus('ready');
+      return;
+    }
+
+    setLoadStatus('loading');
+
+    const callbackName = `__gmaps_init_cb_${Date.now()}`;
+    (window as any)[callbackName] = () => {
+      if (cancelled) return;
+      setLoadStatus('ready');
+      try { delete (window as any)[callbackName]; } catch (e) {}
+    };
+
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(API_KEY)}&libraries=places&callback=${callbackName}`;
+    script.async = true;
+    script.defer = true;
+
+    const onError = () => {
+      if (cancelled) return;
+      setLoadStatus('error');
+      setLoadError('Failed to load Google Maps script. Possible invalid API key or network issue.');
+      cleanup();
+    };
+
+    const timeout = window.setTimeout(() => {
+      if (cancelled) return;
+      if (!(window as any).google || !(window as any).google.maps) {
+        setLoadStatus('error');
+        setLoadError('Google Maps did not initialize. This may indicate an API key/billing issue (ApiProjectMapError).');
+        cleanup();
+      }
+    }, 8000);
+
+    function cleanup() {
+      window.clearTimeout(timeout);
+      script.removeEventListener('error', onError);
+      try { delete (window as any)[callbackName]; } catch (e) {}
+    }
+
+    script.addEventListener('error', onError);
+    document.head.appendChild(script);
+
+    return () => {
+      cancelled = true;
+      cleanup();
+    };
+  }, [API_KEY]);
+
+  if (loadStatus === 'error') {
+    return (
+      <div className="w-full bg-yellow-50 rounded-lg p-6 flex flex-col gap-3" style={{ height }}>
+        <h3 className="font-semibold text-lg">مشكلة في إعداد Google Maps</h3>
+        <p className="text-sm text-gray-700">{loadError}</p>
+        <ul className="text-sm text-gray-600 list-disc list-inside" dir="rtl">
+          <li>تأكد من تفعيل Maps JavaScript API وPlaces API في Google Cloud Console.</li>
+          <li>تأكد من أن مشروع Google Cloud مرتبط بفوترة مفعّلة.</li>
+          <li>تحقق من صحة مفتاح API المستخدم في VITE_GOOGLE_MAPS_API_KEY ومطابقته للمشروع.</li>
+          <li>إذا كان هناك قيود على المفتاح (HTTP referrers)، تأكد من أنها تسمح بالنطاق الذي تستخدمه.</li>
+        </ul>
+        <p className="text-sm text-gray-500 mt-2">يمكنك وضع مفتاح جديد عبر صفحة إعدادات النظام.</p>
+      </div>
+    );
+  }
+
+  if (loadStatus !== 'ready') {
+    return (
+      <div className="w-full bg-gray-100 rounded-lg flex items-center justify-center" style={{ height }}>
+        <span className="text-gray-500">جارٍ تحميل الخريطة...</span>
+      </div>
+    );
+  }
+
+  // Render map only when Google Maps loaded successfully
   return (
     <div className="w-full rounded-lg overflow-hidden shadow-lg border border-gray-200" style={{ height }}>
-      <APIProvider apiKey={API_KEY}>
+      <APIProvider apiKey={''}>
         <Map
           mapId={mapId}
           defaultCenter={center}
@@ -210,8 +292,8 @@ export default function GoogleMapWrapper({
                         </a>
                       </Button>
                     )}
-                    <Button 
-                      size="sm" 
+                    <Button
+                      size="sm"
                       variant="outline"
                       onClick={() => {
                         const url = `https://www.google.com/maps/dir/?api=1&destination=${selectedMarker.position.lat},${selectedMarker.position.lng}`;
