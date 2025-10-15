@@ -367,6 +367,7 @@ export default function LandingPage() {
   const { language, t } = useI18n();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showAIDiagnosis, setShowAIDiagnosis] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-white">
@@ -379,7 +380,7 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                أفضل صديق وفي لابتسامتك مع{" "}
+                ��فضل صديق وفي لابتسامتك مع{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                   الرعاية المدعومة بالذكاء الاصطناعي
                 </span>
