@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Search,
   MapPin,
@@ -61,7 +61,7 @@ const nearbyClinicas = [
     reviews: 203,
     distance: "1.9 كم",
     distanceEn: "1.2 mi",
-    specialties: ["طب الأسنان التجميلي", "زراعة الأسنان"],
+    specialties: ["طب الأسنا�� التجميلي", "زراعة الأسنان"],
     specialtiesEn: ["Cosmetic Dentistry", "Implants"],
     phone: "+964 750 987 6543",
     image:
@@ -386,7 +386,7 @@ export default function LandingPage() {
               </h1>
               <p className="text-lg text-gray-600 mb-8">
                 احصل على تشخيص أسنان فوري بالذكاء الاصطناعي، ابحث عن أفضل
-                العيادات بالقرب منك، واحجز المواعيد أونلاين. انضم للآلاف الذين
+                العيادات بالقرب منك، ��احجز المواعيد أونلاين. انضم للآلاف الذين
                 يثقون بـ Smart لصحة أفواههم.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
