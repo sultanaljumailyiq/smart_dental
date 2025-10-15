@@ -81,7 +81,7 @@ const initialJobListings = [
     coordinates: { lat: 30.5085, lng: 47.7804 },
     type: "دوام جزئي",
     experience: "3+ سنوات",
-    salary: "3,500 - 4,500 د.ع",
+    salary: "3,500 - 4,500 د.��",
     posted: "منذ أسبوع",
     applicants: 28,
     featured: false,
@@ -172,7 +172,7 @@ const initialJobListings = [
     type: "دوام كامل",
     experience: "1-2 سنوات",
     salary: "1,500 - 2,500 د.ع",
-    posted: "منذ 6 أيام",
+    posted: "منذ 6 أ��ام",
     applicants: 15,
     featured: false,
     remote: false,
@@ -401,7 +401,7 @@ export default function JobsNew() {
   // صفحة النظرة العامة
   const OverviewSection = () => (
     <div className="space-y-4">
-      {/* إحصائيات سريعة */}
+      {/* إحصائي��ت سريعة */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center shadow">
           <div className="text-2xl font-extrabold text-blue-700">
@@ -917,7 +917,7 @@ export default function JobsNew() {
         company: "عيادة الجمال الذهبي",
         location: "بغداد، العراق",
         appliedDate: "منذ أسبوع",
-        status: "مقابلة قادمة",
+        status: "مقابلة قادم��",
         statusColor: "green",
         interviewDate: "15 أكتوبر 2025، 10:00 صباحاً",
         salary: "3,000,000 - 4,500,000 د.ع",
@@ -1046,7 +1046,7 @@ export default function JobsNew() {
         </div>
 
         {/* Tabs */}
-        <div className="sticky top-0 z-30 bg-gray-50 -mx-4 px-4 py-3 mb-1">
+        <div className="fixed top-0 left-0 right-0 z-50 bg-gray-50 -mx-4 px-4 py-3 mb-1">
           <div className="flex gap-2 overflow-x-auto pb-2">
             {tabs.map((tab) => (
               <button
