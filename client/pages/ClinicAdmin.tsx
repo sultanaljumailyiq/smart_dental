@@ -49,7 +49,7 @@ interface ClinicSettings {
 const initialSettings: ClinicSettings = {
   name: "عيادة الدكتور أحمد للأسنان",
   description:
-    "عيادة متخصصة في زراعة الأسنان وطب الأسنان التجميلي بأحدث التقنيات العالمية",
+    "عيادة متخصصة في زراعة الأسنان وطب الأسنان التجميلي بأحدث التقنيات العا��مية",
   address: "شارع الكرادة، بناية النور، الطابق الثالث، بغد��د",
   phone: "+964 770 123 4567",
   email: "info@dr-ahmed-dental.com",
@@ -156,7 +156,7 @@ export default function ClinicAdmin() {
   return (
     <div className="min-h-screen bg-gray-50 with-floating-nav">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-30">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">

@@ -29,7 +29,7 @@ const getCourseById = (id: string) => ({
   title: "دورة تقويم الأسنان الشاملة",
   arabicTitle: "دورة تقويم الأسنان الشاملة",
   description: "دورة متقدمة في تقويم الأسنان تغطي جميع الجوانب النظرية والعملية للتقويم الحديث",
-  fullDescription: "هذه الدورة الشاملة تقدم لك كل ما تحتاج معرفته عن تقويم الأسنان الحديث. ستتعلم من خبراء متخصصين وستحصل على شهادة معتمدة بعد اجتياز الاختبار النهائي.",
+  fullDescription: "هذه الدورة الشاملة تقدم لك كل ما تحتاج معرفته عن تقويم الأسنان الحديث. ستتعلم من خبراء متخصصين وستحصل على شهادة معتمدة بعد ��جتياز الاختبار النهائي.",
   image: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800",
   thumbnail: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400",
   instructor: {
@@ -165,7 +165,7 @@ const CourseDetail = () => {
   return (
     <div className="min-h-screen bg-gray-50" dir="rtl">
       {/* Header */}
-      <div className="bg-white border-b sticky top-0 z-10">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <button
             onClick={() => navigate(-1)}
