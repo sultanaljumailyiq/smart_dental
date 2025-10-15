@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="theme-color" content="#3B82F6" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="description" content="Smart Dental Platform - منصة طب الأسنان الذكية - حلول شاملة لإدارة العيادات والموردين في العراق" />
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+    <title>Smart Dental Platform - منصة طب الأسنان الذكية</title>
+    <style>
+      /* Reset mobile styles and enable responsive design */
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        min-width: auto;
+        overflow-x: hidden;
+        font-family: "Cairo", "Tajawal", Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      #root {
+        min-height: 100vh;
+        min-height: 100dvh;
+      }
+
+      /* Enable proper responsive design */
+      .container {
+        width: 100%;
+        max-width: 100vw;
+      }
+
+      /* Safe area support for devices with notches */
+      @supports (padding: max(0px)) {
+        body {
+          padding-left: max(0px, env(safe-area-inset-left));
+          padding-right: max(0px, env(safe-area-inset-right));
+        }
+      }
+
+      /* Improved mobile performance */
+      * {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="module" src="/client/main.tsx"></script>
+  </body>
+</html>

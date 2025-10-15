@@ -1,0 +1,174 @@
+{
+  "site": {
+    "name": "Smart",
+    "defaultLocale": "ar",
+    "framework": "React + Vite + TypeScript",
+    "styling": "Tailwind CSS",
+    "icons": "lucide-react",
+    "routing": "react-router-dom",
+    "source": "client/",
+    "entry": "client/App.tsx"
+  },
+  "navigation": {
+    "header": "client/components/AppWithUnifiedHeader.tsx",
+    "bottomNav": "client/components/UltraModernBottomNav.tsx",
+    "providers": [
+      "I18nProvider",
+      "NavigationProvider",
+      "SystemSettingsProvider",
+      "CartProvider",
+      "FavoritesProvider",
+      "BookmarksProvider"
+    ]
+  },
+  "routes": [
+    "/",
+    "/landing",
+    "/patient-landing",
+    "/community",
+    "/community-old",
+    "/community/groups",
+    "/community/experts",
+    "/community/events",
+    "/education",
+    "/education/models",
+    "/jobs",
+    "/jobs-old",
+    "/marketplace",
+    "/articles",
+    "/articles/:id",
+    "/admin/articles",
+    "/ai-diagnosis",
+    "/smart-chat",
+    "/photo-analysis",
+    "/dental-supply/*",
+    "/dental-supply-old",
+    "/search",
+    "/notifications",
+    "/notifications-old",
+    "/messages",
+    "/messages-old",
+    "/medical-services",
+    "/medical-services-old",
+    "/booking/:clinicId",
+    "/mobile-booking/:clinicId",
+    "/dentist-hub",
+    "/profile",
+    "/favorites",
+    "/settings",
+    "/emergency",
+    "/emergency/first-aid",
+    "/emergency/hospitals",
+    "/emergency/pain-management",
+    "/emergency/dental",
+    "/ai-assistant",
+    "/about",
+    "/clinic/:clinicId/booking",
+    "/modern-booking/:clinicId?",
+    "/simplified-booking/:clinicId?",
+    "/booking-systems",
+    "/clinic/admin",
+    "/clinic/:clinicId/dashboard",
+    "/clinic/admin/old",
+    "/products",
+    "/categories",
+    "/students",
+    "/trending",
+    "/featured",
+    "/offers",
+    "/suppliers",
+    "/suppliers/:supplierId",
+    "/brands",
+    "/brand/:id",
+    "/categories/:categoryName",
+    "/categories/:categoryName/:subcategoryName",
+    "/product/:productId",
+    "/dashboard",
+    "/dentist/dashboard",
+    "/supplier/dashboard",
+    "/admin",
+    "/admin/dashboard",
+    "/system-admin",
+    "/system-admin/dashboard",
+    "/system-admin/*",
+    "/platform-admin",
+    "/admin/platform-admin",
+    "/marketplace-admin",
+    "/super-admin",
+    "/admin/users",
+    "/admin/settings",
+    "/patient-marketplace",
+    "/test-enhanced",
+    "*"
+  ],
+  "keyPages": [
+    {
+      "path": "/",
+      "file": "client/pages/LandingPage.tsx",
+      "sections": ["Hero","AI Features","Clinic Finder (CompactInteractiveMap)","Articles","Stats","Footer"]
+    },
+    {
+      "path": "/medical-services",
+      "file": "client/pages/ModernMedicalServices.tsx",
+      "sections": ["Hero","Horizontal Category Navigation","Interactive Maps","Service Cards","Features","Emergency Contact","AI Assistant"]
+    },
+    {
+      "path": "/emergency",
+      "file": "client/pages/Emergency.tsx",
+      "sections": ["Header","Quick Actions","Specialized Emergency Services","Quick Sub-navigation","Nearby Hospitals","Emergency Tips","First Aid Guide Section"]
+    },
+    {
+      "path": "/articles",
+      "file": "client/pages/Articles.tsx",
+      "sections": ["Hero","First Aid redirect","PatientFriendlyArticlesSection","Footer"]
+    },
+    {
+      "path": "/articles/:id",
+      "file": "client/pages/ArticleDetail.tsx",
+      "sections": ["Article Header","Article Content","Related Articles (compact)"]
+    },
+    {
+      "path": "/emergency/hospitals",
+      "file": "client/pages/EmergencyHospitals.tsx",
+      "sections": ["Header","Hospitals List (UnifiedPlaceCard)"]
+    }
+  ],
+  "components": [
+    {"name": "AppWithUnifiedHeader","file": "client/components/AppWithUnifiedHeader.tsx","purpose": "App layout with unified header"},
+    {"name": "ModernUnifiedHeader","file": "client/components/ModernUnifiedHeader.tsx","purpose": "Top navigation/header"},
+    {"name": "UltraModernBottomNav","file": "client/components/UltraModernBottomNav.tsx","purpose": "Sticky bottom nav on mobile"},
+    {"name": "CompactInteractiveMap","file": "client/components/CompactInteractiveMap.tsx","purpose": "Home map widget"},
+    {"name": "UnifiedInteractiveMap","file": "client/components/UnifiedInteractiveMap.tsx","purpose": "Detailed interactive map with markers and clinic cards (doctor names hidden)"},
+    {"name": "UnifiedPlaceCard","file": "client/components/UnifiedPlaceCard.tsx","purpose": "Compact clinic/hospital card"},
+    {"name": "PatientFriendlyArticlesSection","file": "client/components/PatientFriendlyArticlesSection.tsx","purpose": "Compact article cards (no meta, full-card clickable)"}
+  ],
+  "contentDecisions": {
+    "articles": {
+      "cards": {
+        "compact": true,
+        "hideMeta": true,
+        "clickableCard": true,
+        "categoryBadgeInImage": true
+      }
+    },
+    "emergency": {
+      "quickNavAboveMap": true,
+      "mainCards": ["طوارئ الأسنان","إدارة ألم الأسنان"],
+      "expandOnClick": true
+    },
+    "maps": {
+      "clinicListHidesDoctorName": true,
+      "selectedCard": "compact overlay with image header"
+    }
+  },
+  "i18n": {
+    "languages": ["ar"],
+    "rtl": true
+  },
+  "design": {
+    "colors": "tailwind config + project tokens",
+    "shadows": "Tailwind presets",
+    "typography": "Tailwind + system fonts",
+    "responsive": "Mobile-first, flex/grid, snap scrolling"
+  }
+}
