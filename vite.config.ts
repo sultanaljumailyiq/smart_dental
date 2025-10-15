@@ -1,7 +1,6 @@
 import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { componentTagger } from "lovable-tagger";
 import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
@@ -20,7 +19,18 @@ export default defineConfig(async ({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' && componentTagger(),
+    mode === 'development' ? (() => {
+      try {
+        // Lazy import at config time to avoid loading project files that use path aliases
+        // when Node resolves the config file
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        const mod = require('lovable-tagger');
+        return mod.componentTagger();
+      } catch (e) {
+        // If lovable-tagger isn't available in the environment, skip the plugin
+        return null;
+      }
+    })() : null,
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'icon-*.png'],
