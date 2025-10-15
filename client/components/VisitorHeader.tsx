@@ -68,7 +68,7 @@ export function VisitorHeader() {
     <>
       <header
         className={cn(
-          "fixed !top-0 !left-0 !right-0 !z-[110] transition-all duration-300",
+          "fixed !top-0 !left-0 !right-0 !z-[120] transition-all duration-300",
           "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200/50"
         )}
         style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 110 }}
