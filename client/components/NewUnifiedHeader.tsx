@@ -217,7 +217,7 @@ export const NewUnifiedHeader: React.FC<NewUnifiedHeaderProps> = ({
       {/* الهيدر الرئيسي */}
       <header
         className={cn(
-          "sticky top-0 z-40 bg-white/95 backdrop-blur-lg border-b border-gray-200/50",
+          "fixed top-0 left-0 right-0 z-[110] bg-white/95 backdrop-blur-lg border-b border-gray-200/50",
           className,
         )}
       >
