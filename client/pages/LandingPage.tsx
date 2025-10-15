@@ -61,7 +61,7 @@ const nearbyClinicas = [
     reviews: 203,
     distance: "1.9 كم",
     distanceEn: "1.2 mi",
-    specialties: ["طب الأسنا�� التجميلي", "زراعة الأسنان"],
+    specialties: ["طب الأسنان التجميلي", "زراعة الأسنان"],
     specialtiesEn: ["Cosmetic Dentistry", "Implants"],
     phone: "+964 750 987 6543",
     image:
@@ -109,7 +109,7 @@ const articles = [
   {
     id: 2,
     title:
-      "الذكاء الاصطناعي في طب الأسنان: كيف تُحدث التكنولوجيا ثورة في صحة الفم",
+      "ا��ذكاء الاصطناعي في طب الأسنان: كيف تُحدث التكنولوجيا ثورة في صحة الفم",
     titleEn: "AI in Dentistry: How Technology is Revolutionizing Oral Health",
     excerpt: "اكتشف كيف يُحول الذكاء الاصطناعي تشخيص الأسنان وتخطيط العلاج.",
     excerptEn:
@@ -386,12 +386,12 @@ export default function LandingPage() {
               </h1>
               <p className="text-lg text-gray-600 mb-8">
                 احصل على تشخيص أسنان فوري بالذكاء الاصطناعي، ابحث عن أفضل
-                العيادات بالقرب منك، ��احجز المواعيد أونلاين. انضم للآلاف الذين
+                العيادات بالقرب منك، واحجز المواعيد أونلاين. انضم للآلاف الذين
                 يثقون بـ Smart لصحة أفواههم.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => setShowAIDiagnosis(true)}
+                  onClick={() => navigate('/medical-services?section=smart-diagnosis')}
                   className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center gap-2"
                 >
                   <Brain className="w-5 h-5" />
