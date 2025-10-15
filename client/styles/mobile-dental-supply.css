@@ -1,0 +1,273 @@
+/* Mobile-specific styles for dental supply market */
+
+/* Prevent horizontal overflow on mobile */
+@media (max-width: 768px) {
+  body, html {
+    max-width: 100vw !important;
+    width: 100% !important;
+  }
+  
+  * {
+    box-sizing: border-box !important;
+  }
+  
+  /* Specific fixes for dental supply mobile */
+  .mobile-container {
+    width: 100% !important;
+    max-width: 100vw !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Hide scrollbars on mobile for cleaner look */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile tap highlight */
+.mobile-tap-highlight {
+  -webkit-tap-highlight-color: rgba(59, 130, 246, 0.3);
+  tap-highlight-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Mobile button press effect */
+.mobile-button-press {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+/* Touch-friendly sizing and overflow prevention */
+@media (max-width: 768px) {
+  /* Prevent any horizontal overflow */
+  .mobile-container {
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure minimum touch target size */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Optimize text for mobile reading */
+  .mobile-text-optimize {
+    line-height: 1.5;
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+  
+  /* Mobile-optimized cards */
+  .mobile-card {
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .mobile-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Better spacing for mobile */
+  .mobile-spacing {
+    padding: 12px;
+    margin-bottom: 16px;
+  }
+  
+  /* Mobile grid optimizations */
+  .mobile-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .mobile-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  
+  /* Horizontal scroll for categories */
+  .mobile-horizontal-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 0 16px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .mobile-horizontal-scroll > * {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+  
+  /* Mobile hero banner */
+  .mobile-hero {
+    height: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Mobile product card */
+  .mobile-product-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+  }
+  
+  .mobile-product-card:active {
+    transform: scale(0.98);
+  }
+  
+  /* Mobile category card */
+  .mobile-category-card {
+    width: 80px;
+    text-align: center;
+    background: white;
+    border-radius: 16px;
+    padding: 12px 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Mobile bottom spacing for navigation */
+  .mobile-bottom-space {
+    height: 80px;
+    flex-shrink: 0;
+  }
+  
+  /* Mobile safe area handling */
+  .mobile-safe-area {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  
+  /* Mobile text truncation */
+  .mobile-line-clamp-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .mobile-line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Mobile loading states */
+  .mobile-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: mobile-skeleton-loading 1.5s infinite;
+  }
+  
+  @keyframes mobile-skeleton-loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  
+  /* Mobile form optimizations */
+  input[type="text"], 
+  input[type="search"], 
+  input[type="email"], 
+  textarea {
+    font-size: 16px; /* Prevent zoom on iOS */
+    border-radius: 12px;
+    padding: 12px 16px;
+  }
+  
+  /* Mobile button optimizations */
+  .mobile-button {
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    min-height: 48px;
+  }
+  
+  .mobile-button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Mobile modal optimizations */
+  .mobile-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+  
+  .mobile-modal-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 20px 20px 0 0;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: translateY(100%);
+    animation: mobile-modal-slide-up 0.3s ease forwards;
+  }
+  
+  @keyframes mobile-modal-slide-up {
+    to { transform: translateY(0); }
+  }
+}
+
+/* Dark mode optimizations for mobile */
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  .mobile-card {
+    background: #1f2937;
+    border: 1px solid #374151;
+  }
+  
+  .mobile-skeleton {
+    background: linear-gradient(90deg, #374151 25%, #4b5563 50%, #374151 75%);
+    background-size: 200% 100%;
+  }
+}
+
+/* Performance optimizations */
+@media (max-width: 768px) {
+  /* Reduce expensive operations on mobile */
+  * {
+    will-change: auto;
+  }
+  
+  /* Enable hardware acceleration for transforms */
+  .mobile-gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+  
+  /* Optimize images for mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

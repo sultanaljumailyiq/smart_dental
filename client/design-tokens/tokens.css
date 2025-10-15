@@ -1,0 +1,421 @@
+/* DentalHub Design Tokens - CSS Custom Properties */
+/* Auto-generated from tokens.ts - Do not edit manually */
+
+:root {
+  /* ===== COLORS ===== */
+
+  /* Primary Colors */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-primary-950: #172554;
+
+  /* Secondary Colors */
+  --color-secondary-50: #f0f9ff;
+  --color-secondary-100: #e0f2fe;
+  --color-secondary-200: #bae6fd;
+  --color-secondary-300: #7dd3fc;
+  --color-secondary-400: #38bdf8;
+  --color-secondary-500: #0ea5e9;
+  --color-secondary-600: #0284c7;
+  --color-secondary-700: #0369a1;
+  --color-secondary-800: #075985;
+  --color-secondary-900: #0c4a6e;
+  --color-secondary-950: #082f49;
+
+  /* Success Colors */
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+  --color-success-950: #052e16;
+
+  /* Warning Colors */
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+  --color-warning-950: #451a03;
+
+  /* Error Colors */
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+  --color-error-950: #450a0a;
+
+  /* Neutral Colors */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+
+  /* Specialty Colors */
+  --color-dental-tooth: #ffffff;
+  --color-dental-enamel: #f8f9fa;
+  --color-dental-cavity: #dc2626;
+  --color-dental-healthy: #22c55e;
+  --color-dental-filling: #64748b;
+
+  --color-emergency-urgent: #dc2626;
+  --color-emergency-high: #f59e0b;
+  --color-emergency-medium: #3b82f6;
+  --color-emergency-low: #22c55e;
+
+  --color-professional-verified: #22c55e;
+  --color-professional-pending: #f59e0b;
+  --color-professional-rejected: #dc2626;
+  --color-professional-inactive: #64748b;
+
+  /* Semantic Colors */
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8fafc;
+  --color-background-tertiary: #f1f5f9;
+  --color-background-accent: #eff6ff;
+
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #334155;
+  --color-text-tertiary: #64748b;
+  --color-text-disabled: #94a3b8;
+  --color-text-inverse: #ffffff;
+
+  --color-border-primary: #e2e8f0;
+  --color-border-secondary: #cbd5e1;
+  --color-border-accent: #bfdbfe;
+  --color-border-focus: #3b82f6;
+
+  --color-interactive-hover: #f1f5f9;
+  --color-interactive-active: #e2e8f0;
+  --color-interactive-disabled: #f8fafc;
+  --color-interactive-focus: #eff6ff;
+
+  /* ===== TYPOGRAPHY ===== */
+
+  /* Font Families */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-arabic: "Noto Sans Arabic", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Consolas", monospace;
+  --font-medical: "Inter", system-ui, sans-serif;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+  --font-size-7xl: 4.5rem;
+  --font-size-8xl: 6rem;
+  --font-size-9xl: 8rem;
+
+  /* Font Weights */
+  --font-weight-thin: 100;
+  --font-weight-extralight: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-black: 900;
+
+  /* Line Heights */
+  --line-height-none: 1;
+  --line-height-tight: 1.25;
+  --line-height-snug: 1.375;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+  --line-height-loose: 2;
+
+  /* Letter Spacing */
+  --letter-spacing-tighter: -0.05em;
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0em;
+  --letter-spacing-wide: 0.025em;
+  --letter-spacing-wider: 0.05em;
+  --letter-spacing-widest: 0.1em;
+
+  /* ===== SPACING ===== */
+  --spacing-0: 0;
+  --spacing-px: 1px;
+  --spacing-0_5: 0.125rem;
+  --spacing-1: 0.25rem;
+  --spacing-1_5: 0.375rem;
+  --spacing-2: 0.5rem;
+  --spacing-2_5: 0.625rem;
+  --spacing-3: 0.75rem;
+  --spacing-3_5: 0.875rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-7: 1.75rem;
+  --spacing-8: 2rem;
+  --spacing-9: 2.25rem;
+  --spacing-10: 2.5rem;
+  --spacing-11: 2.75rem;
+  --spacing-12: 3rem;
+  --spacing-14: 3.5rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+  --spacing-28: 7rem;
+  --spacing-32: 8rem;
+  --spacing-36: 9rem;
+  --spacing-40: 10rem;
+  --spacing-44: 11rem;
+  --spacing-48: 12rem;
+  --spacing-52: 13rem;
+  --spacing-56: 14rem;
+  --spacing-60: 15rem;
+  --spacing-64: 16rem;
+  --spacing-72: 18rem;
+  --spacing-80: 20rem;
+  --spacing-96: 24rem;
+
+  /* ===== SIZING ===== */
+
+  /* Component Sizes */
+  --size-component-xs: 1.5rem;
+  --size-component-sm: 2rem;
+  --size-component-base: 2.5rem;
+  --size-component-lg: 3rem;
+  --size-component-xl: 3.5rem;
+  --size-component-2xl: 4rem;
+
+  /* Icon Sizes */
+  --size-icon-xs: 0.75rem;
+  --size-icon-sm: 1rem;
+  --size-icon-base: 1.25rem;
+  --size-icon-lg: 1.5rem;
+  --size-icon-xl: 2rem;
+  --size-icon-2xl: 2.5rem;
+
+  /* Avatar Sizes */
+  --size-avatar-xs: 1.5rem;
+  --size-avatar-sm: 2rem;
+  --size-avatar-base: 2.5rem;
+  --size-avatar-lg: 3rem;
+  --size-avatar-xl: 4rem;
+  --size-avatar-2xl: 5rem;
+
+  /* ===== BORDERS ===== */
+
+  /* Border Widths */
+  --border-width-0: 0;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-4: 4px;
+  --border-width-8: 8px;
+
+  /* Border Radius */
+  --border-radius-none: 0;
+  --border-radius-sm: 0.125rem;
+  --border-radius-base: 0.25rem;
+  --border-radius-md: 0.375rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-2xl: 1rem;
+  --border-radius-3xl: 1.5rem;
+  --border-radius-full: 9999px;
+
+  /* ===== SHADOWS ===== */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl:
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* Medical Specific Shadows */
+  --shadow-medical-card:
+    0 4px 6px -1px rgb(59 130 246 / 0.1), 0 2px 4px -2px rgb(59 130 246 / 0.1);
+  --shadow-medical-urgent:
+    0 4px 6px -1px rgb(220 38 38 / 0.2), 0 2px 4px -2px rgb(220 38 38 / 0.2);
+  --shadow-medical-success:
+    0 4px 6px -1px rgb(34 197 94 / 0.1), 0 2px 4px -2px rgb(34 197 94 / 0.1);
+
+  /* ===== TRANSITIONS ===== */
+
+  /* Duration */
+  --transition-duration-75: 75ms;
+  --transition-duration-100: 100ms;
+  --transition-duration-150: 150ms;
+  --transition-duration-200: 200ms;
+  --transition-duration-300: 300ms;
+  --transition-duration-500: 500ms;
+  --transition-duration-700: 700ms;
+  --transition-duration-1000: 1000ms;
+
+  /* Timing Functions */
+  --transition-timing-linear: linear;
+  --transition-timing-in: cubic-bezier(0.4, 0, 1, 1);
+  --transition-timing-out: cubic-bezier(0, 0, 0.2, 1);
+  --transition-timing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Common Transitions */
+  --transition-fast: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ===== Z-INDEX ===== */
+  --z-index-auto: auto;
+  --z-index-0: 0;
+  --z-index-10: 10;
+  --z-index-20: 20;
+  --z-index-30: 30;
+  --z-index-40: 40;
+  --z-index-50: 50;
+  --z-index-modal: 1000;
+  --z-index-popover: 1010;
+  --z-index-overlay: 1020;
+  --z-index-max: 9999;
+
+  /* ===== COMPONENT TOKENS ===== */
+
+  /* Button Tokens */
+  --button-height-sm: var(--size-component-sm);
+  --button-height-base: var(--size-component-base);
+  --button-height-lg: var(--size-component-lg);
+  --button-padding-sm: var(--spacing-2) var(--spacing-3);
+  --button-padding-base: var(--spacing-2_5) var(--spacing-4);
+  --button-padding-lg: var(--spacing-3) var(--spacing-6);
+  --button-border-radius: var(--border-radius-md);
+
+  /* Card Tokens */
+  --card-padding-sm: var(--spacing-4);
+  --card-padding-base: var(--spacing-6);
+  --card-padding-lg: var(--spacing-8);
+  --card-border-radius: var(--border-radius-xl);
+  --card-shadow: var(--shadow-md);
+
+  /* Input Tokens */
+  --input-height-sm: var(--size-component-sm);
+  --input-height-base: var(--size-component-base);
+  --input-height-lg: var(--size-component-lg);
+  --input-padding-sm: var(--spacing-2) var(--spacing-3);
+  --input-padding-base: var(--spacing-2_5) var(--spacing-4);
+  --input-padding-lg: var(--spacing-3) var(--spacing-4);
+  --input-border-radius: var(--border-radius-md);
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background-primary: var(--color-neutral-900);
+    --color-background-secondary: var(--color-neutral-800);
+    --color-background-tertiary: var(--color-neutral-700);
+    --color-background-accent: var(--color-primary-900);
+
+    --color-text-primary: var(--color-neutral-50);
+    --color-text-secondary: var(--color-neutral-200);
+    --color-text-tertiary: var(--color-neutral-400);
+    --color-text-disabled: var(--color-neutral-600);
+
+    --color-border-primary: var(--color-neutral-700);
+    --color-border-secondary: var(--color-neutral-600);
+    --color-border-accent: var(--color-primary-700);
+
+    --color-interactive-hover: var(--color-neutral-800);
+    --color-interactive-active: var(--color-neutral-700);
+    --color-interactive-disabled: var(--color-neutral-900);
+    --color-interactive-focus: var(--color-primary-800);
+  }
+}
+
+/* Utility classes using design tokens */
+.dt-text-primary {
+  color: var(--color-text-primary);
+}
+.dt-text-secondary {
+  color: var(--color-text-secondary);
+}
+.dt-text-tertiary {
+  color: var(--color-text-tertiary);
+}
+
+.dt-bg-primary {
+  background-color: var(--color-background-primary);
+}
+.dt-bg-secondary {
+  background-color: var(--color-background-secondary);
+}
+.dt-bg-accent {
+  background-color: var(--color-background-accent);
+}
+
+.dt-border-primary {
+  border-color: var(--color-border-primary);
+}
+.dt-border-accent {
+  border-color: var(--color-border-accent);
+}
+
+.dt-shadow-card {
+  box-shadow: var(--shadow-medical-card);
+}
+.dt-shadow-urgent {
+  box-shadow: var(--shadow-medical-urgent);
+}
+.dt-shadow-success {
+  box-shadow: var(--shadow-medical-success);
+}
+
+.dt-transition-fast {
+  transition: var(--transition-fast);
+}
+.dt-transition-normal {
+  transition: var(--transition-normal);
+}
+.dt-transition-slow {
+  transition: var(--transition-slow);
+}
+
+.dt-font-sans {
+  font-family: var(--font-sans);
+}
+.dt-font-arabic {
+  font-family: var(--font-arabic);
+}
+.dt-font-medical {
+  font-family: var(--font-medical);
+}
