@@ -176,7 +176,7 @@ const SECTION_COLORS = {
 };
 
 import { createPortal } from "react-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function FinalUnifiedBottomNav({
   userRole = null,
@@ -260,7 +260,7 @@ export default function FinalUnifiedBottomNav({
       )}
       style={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 70 }}
     >
-      {/* مؤشر النشاط العلوي */}
+      {/* مؤش�� النشاط العلوي */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gray-200 to-transparent">
         {activeIndex >= 0 && (
           <div
