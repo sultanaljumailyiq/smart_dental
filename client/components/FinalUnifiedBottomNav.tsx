@@ -354,6 +354,13 @@ export default function FinalUnifiedBottomNav({
       )}
     </nav>
   );
+
+  // Render via portal on client to avoid stacking-context issues
+  if (typeof document !== "undefined" && mounted) {
+    return createPortal(navContent, document.body);
+  }
+
+  return navContent;
 }
 
 // مكون مساعد لعرض نقاط الإشعارات
