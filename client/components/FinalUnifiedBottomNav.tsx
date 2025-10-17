@@ -175,6 +175,9 @@ const SECTION_COLORS = {
   },
 };
 
+import { createPortal } from "react-dom";
+import { useEffect } from "react";
+
 export default function FinalUnifiedBottomNav({
   userRole = null,
   className,
@@ -366,4 +369,3 @@ export function NavBadge({
     </div>
   );
 }
-
