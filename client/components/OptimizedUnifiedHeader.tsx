@@ -160,7 +160,7 @@ const rolePermissions = {
 };
 
 import { createPortal } from "react-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function OptimizedUnifiedHeader({
   customActions,
@@ -464,7 +464,7 @@ export default function OptimizedUnifiedHeader({
                       {/* Quick Navigation - مقلص للتوفير في المساحة */}
                       <div className="mb-2">
                         <div className="text-xs font-medium text-gray-500 px-3 py-1">
-                          وص��ات سريعة
+                          وصلات سريعة
                         </div>
                         {availableSections.slice(0, 3).map((section) => (
                           <button
