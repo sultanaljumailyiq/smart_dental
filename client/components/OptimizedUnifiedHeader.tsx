@@ -159,6 +159,9 @@ const rolePermissions = {
   },
 };
 
+import { createPortal } from "react-dom";
+import { useEffect } from "react";
+
 export default function OptimizedUnifiedHeader({
   customActions,
   showBackButton = false,
@@ -251,7 +254,10 @@ export default function OptimizedUnifiedHeader({
     return currentSectionKey === sectionKey;
   };
 
-  return (
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
+  const headerContent = (
     <>
       <header
         className={cn(
@@ -458,7 +464,7 @@ export default function OptimizedUnifiedHeader({
                       {/* Quick Navigation - مقلص للتوفير في المساحة */}
                       <div className="mb-2">
                         <div className="text-xs font-medium text-gray-500 px-3 py-1">
-                          وصلات سريعة
+                          وص��ات سريعة
                         </div>
                         {availableSections.slice(0, 3).map((section) => (
                           <button
@@ -701,4 +707,11 @@ export default function OptimizedUnifiedHeader({
       />
     </>
   );
+
+  // Render via portal on client to avoid stacking-context issues
+  if (typeof document !== "undefined" && mounted) {
+    return createPortal(headerContent, document.body);
+  }
+
+  return headerContent;
 }
