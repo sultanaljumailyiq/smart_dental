@@ -247,7 +247,10 @@ export default function FinalUnifiedBottomNav({
 
   const activeIndex = getActiveItemIndex();
 
-  return (
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
+  const navContent = (
     <nav
       className={cn(
         "fixed !bottom-0 !left-0 !right-0 !z-[70]",
