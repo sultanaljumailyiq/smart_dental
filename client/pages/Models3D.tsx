@@ -49,7 +49,7 @@ const models3D = [
     id: 1,
     title: "التشريح الكامل للأسنان",
     description:
-      "نموذج تفاعلي شامل يظ��ر التركيب التشريحي المفصل لجميع أنواع الأسنان والأنسجة المحيطة بها.",
+      "نموذج تفاعلي شامل يظ��ر التركيب التش��يحي المفصل لجميع أنواع الأسنان والأنسجة المحيطة بها.",
     thumbnail:
       "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=400&h=300&fit=crop",
     category: "تشريح",
@@ -191,7 +191,7 @@ const models3D = [
     id: 5,
     title: "تشريح الأعصاب السنية",
     description:
-      "نموذج متخصص يوضح الشبكة العصبية المعقدة داخل الأسنان والفكين بتفاصيل عالية الدقة.",
+      "نموذج متخصص يوضح الشبكة العصبية المعق��ة داخل الأسنان والفكين بتفاصيل عالية الدقة.",
     thumbnail:
       "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop",
     category: "تشريح",
@@ -635,7 +635,7 @@ export default function Models3D() {
                   </h4>
                   <div className="space-y-3 text-sm">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">التصنيف:</span>
+                      <span className="text-gray-600">ا��تصنيف:</span>
                       <span className="font-medium">
                         {selectedModel.category}
                       </span>
@@ -813,7 +813,7 @@ export default function Models3D() {
       dir={language === "ar" ? "rtl" : "ltr"}
     >
       {/* Header */}
-      <div className="sticky top-0 bg-white border-b border-gray-200 z-30">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
@@ -877,7 +877,7 @@ export default function Models3D() {
                 استكشف النماذج ثلاثية الأبعاد
               </h1>
               <p className="text-lg mb-6 opacity-90">
-                مجموعة شاملة من النماذج ��لتفاعلية ثلاثية الأبعاد لتعلم طب
+                مجموعة شاملة من النماذج ��لتفاعلية ثلاثية ال��بعاد لتعلم طب
                 الأسنان بطريقة ت��اعلية ومبتكرة.
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">

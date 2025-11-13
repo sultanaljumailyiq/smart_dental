@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Search,
   MapPin,
@@ -109,7 +109,7 @@ const articles = [
   {
     id: 2,
     title:
-      "الذكاء الاصطناعي في طب الأسنان: كيف تُحدث التكنولوجيا ثورة في صحة الفم",
+      "ا��ذكاء الاصطناعي في طب الأسنان: كيف تُحدث التكنولوجيا ثورة في صحة الفم",
     titleEn: "AI in Dentistry: How Technology is Revolutionizing Oral Health",
     excerpt: "اكتشف كيف يُحول الذكاء الاصطناعي تشخيص الأسنان وتخطيط العلاج.",
     excerptEn:
@@ -367,6 +367,7 @@ export default function LandingPage() {
   const { language, t } = useI18n();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showAIDiagnosis, setShowAIDiagnosis] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-white">
@@ -379,7 +380,7 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                أفضل صديق وفي لابتسامتك مع{" "}
+                ��فضل صديق وفي لابتسامتك مع{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                   الرعاية المدعومة بالذكاء الاصطناعي
                 </span>
@@ -391,7 +392,7 @@ export default function LandingPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button
-                  onClick={() => setShowAIDiagnosis(true)}
+                  onClick={() => navigate('/medical-services?section=smart-diagnosis')}
                   className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all flex items-center gap-2"
                 >
                   <Brain className="w-5 h-5" />

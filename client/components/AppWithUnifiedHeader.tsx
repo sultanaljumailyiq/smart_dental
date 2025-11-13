@@ -14,7 +14,6 @@ const PAGES_WITHOUT_UNIFIED_HEADER = [
   "/dental/auth",
   "/supplier",
   "/supplier/auth",
-  "/medical-services",
   "/ai-diagnosis",
   "/photo-analysis",
   "/smart-chat",
@@ -33,7 +32,7 @@ const MINIMAL_HEADER_PAGES = [
   "/reset-password",
 ];
 
-// مكون للتحقق من نوع الصفحة وعر�� الهيدر المناسب
+// مكون للتحقق من نوع الصفحة وعر�� اله��در المناسب
 function HeaderWrapper({ children }: { children: React.ReactNode }) {
   const location = useLocation();
   const { section, config, isTransitioning } = useCurrentSection();

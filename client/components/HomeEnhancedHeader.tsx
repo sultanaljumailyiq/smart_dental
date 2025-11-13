@@ -301,7 +301,7 @@ export default function HomeEnhancedHeader({
   const navigationSections = getNavigationSections();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-lg">
+    <header className="fixed top-0 left-0 right-0 z-[120] bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-lg">
       {/* شريط ملون علوي */}
       <div className={cn("h-1 bg-gradient-to-r", homeConfig.gradient)} />
 

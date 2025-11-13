@@ -549,7 +549,7 @@ export default function UnifiedHeader({
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-[110] bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm transition-all duration-300",
+          "fixed top-0 left-0 right-0 z-[120] bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm transition-all duration-300",
           isTransitioning && "border-blue-200/50",
           variant === "minimal" && "bg-white/80",
         )}

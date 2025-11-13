@@ -52,7 +52,7 @@ const mockClinic: Clinic = {
   doctors: [
     {
       id: "doc1",
-      name: "د. أحمد الرحمة",
+      name: "د. أح��د الرحمة",
       specialties: ["جراحة الفم والفكين", "زراعة الأسنان"]
     },
     {
@@ -242,7 +242,7 @@ const MobileBookingPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b sticky top-0 z-10">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b">
         <div className="flex items-center justify-between p-4">
           <button
             onClick={() => navigate(-1)}

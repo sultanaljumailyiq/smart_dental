@@ -99,7 +99,7 @@ export default function UnifiedNavigationHeader({
   const getNavigationSections = () => {
     const sections = [];
 
-    // الصفحة الرئيسية - متاحة للجميع
+    // الصفحة الرئيسية - متاح�� للجميع
     if (permissions.canAccessHome) {
       sections.push({
         key: "home",
@@ -158,7 +158,7 @@ export default function UnifiedNavigationHeader({
   const navigationSections = getNavigationSections();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-[120] bg-white/95 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* الشعار والتنقل */}

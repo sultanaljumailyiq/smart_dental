@@ -114,7 +114,7 @@ const mockResults = {
 };
 
 const popularSearches = [
-  "زراعة الأسنان",
+  "ز��اعة الأسنان",
   "تبييض الأسنان",
   "تقويم الأسنان",
   "علاج العصب",
@@ -344,7 +344,7 @@ export default function Search() {
       dir={language === "ar" ? "rtl" : "ltr"}
     >
       {/* Header */}
-      <div className="sticky top-0 bg-white border-b border-gray-200 z-30">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center gap-4 h-16">
             <div className="flex-1 relative">

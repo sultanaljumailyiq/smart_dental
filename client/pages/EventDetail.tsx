@@ -67,7 +67,7 @@ const getEventById = (id: string) => ({
       name: "د. محمد العلي",
       title: "أخصائي علاج العصب",
       avatar: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100",
-      bio: "متخصص في العلاج بدون ألم"
+      bio: "��تخصص في العلاج بدون ألم"
     },
   ],
   agenda: [
@@ -130,7 +130,7 @@ const EventDetail = () => {
   return (
     <div className="min-h-screen bg-gray-50" dir="rtl">
       {/* Header */}
-      <div className="bg-white border-b sticky top-0 z-10">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           <button
             onClick={() => navigate(-1)}

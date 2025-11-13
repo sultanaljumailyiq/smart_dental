@@ -155,7 +155,7 @@ const Community = () => {
     { 
       id: 4, 
       title: "Cochrane Oral Health",
-      description: "مراجعات منهجية لأبحاث صحة الفم",
+      description: "مراجعات ��نهجية لأبحاث صحة الفم",
       url: "cochranelibrary.com/oral-health",
       type: "مراجعات",
       language: "English",
@@ -462,7 +462,7 @@ const Community = () => {
   return (
     <div className="min-h-screen bg-gray-50" dir="rtl">
       {/* Mobile Navigation */}
-      <div className="sticky top-0 bg-white border-b border-gray-200 z-30 shadow-sm">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="flex overflow-x-auto hide-scrollbar">
           {sections.map((section) => (
             <button

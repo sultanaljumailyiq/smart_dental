@@ -161,7 +161,7 @@ const medicalCategories: MedicalCategory[] = [{
     path: "/doctor-profiles",
     color: "blue",
     gradient: "from-blue-500 to-teal-500",
-    features: ["سيرة ذاتية", "التخصصات", "سنوات الخبرة"]
+    features: ["سيرة ذاتية", "التخصصات", "��نوات الخبرة"]
   }, {
     id: "clinic-facilities",
     title: "إمكانيات العيا��ات",
@@ -388,7 +388,6 @@ export default function ModernMedicalServices() {
     count: cat.cards?.length || 0
   }));
   return <>
-    <VisitorHeader />
     <div className="min-h-screen bg-gray-50 pt-16">
       <div className="pb-20">
         {/* Enhanced Hero Section */}

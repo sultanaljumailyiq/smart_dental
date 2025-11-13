@@ -91,7 +91,7 @@ export default function CommunitySettings() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50" dir="rtl">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex items-center gap-4">
             <Link

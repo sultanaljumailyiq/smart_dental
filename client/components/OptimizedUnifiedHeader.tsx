@@ -159,6 +159,9 @@ const rolePermissions = {
   },
 };
 
+import { createPortal } from "react-dom";
+import { useEffect } from "react";
+
 export default function OptimizedUnifiedHeader({
   customActions,
   showBackButton = false,
@@ -251,14 +254,17 @@ export default function OptimizedUnifiedHeader({
     return currentSectionKey === sectionKey;
   };
 
-  return (
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
+  const headerContent = (
     <>
       <header
         className={cn(
-          "fixed !top-0 !left-0 !right-0 !z-[110] transition-all duration-300",
+          "fixed !top-0 !left-0 !right-0 !z-[120] transition-all duration-300",
           "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-200/50",
         )}
-        style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 110 }}
+        style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 120 }}
       >
         <div className="px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -455,7 +461,7 @@ export default function OptimizedUnifiedHeader({
                         </div>
                       </div>
 
-                      {/* Quick Navigation - مقلص للتوفير في المساحة */}
+                      {/* Quick Navigation - مقلص للتوفير في الم��احة */}
                       <div className="mb-2">
                         <div className="text-xs font-medium text-gray-500 px-3 py-1">
                           وصلات سريعة
@@ -701,4 +707,11 @@ export default function OptimizedUnifiedHeader({
       />
     </>
   );
+
+  // Render via portal on client to avoid stacking-context issues
+  if (typeof document !== "undefined" && mounted) {
+    return createPortal(headerContent, document.body);
+  }
+
+  return headerContent;
 }

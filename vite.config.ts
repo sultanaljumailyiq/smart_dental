@@ -1,12 +1,10 @@
 import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
-import { createServer } from "./server";
-import { componentTagger } from "lovable-tagger";
 import { VitePWA } from 'vite-plugin-pwa';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig(async ({ mode }) => ({
   server: {
     host: "0.0.0.0",
     port: 5000,
@@ -21,7 +19,18 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' && componentTagger(),
+    mode === 'development' ? (() => {
+      try {
+        // Lazy import at config time to avoid loading project files that use path aliases
+        // when Node resolves the config file
+        // eslint-disable-next-line @typescript-eslint/no-var-requires
+        const mod = require('lovable-tagger');
+        return mod.componentTagger();
+      } catch (e) {
+        // If lovable-tagger isn't available in the environment, skip the plugin
+        return null;
+      }
+    })() : null,
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'icon-*.png'],
@@ -124,7 +133,6 @@ export default defineConfig(({ mode }) => ({
         navigateFallbackAllowlist: [/./]
       }
     }),
-    expressPlugin()
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -137,8 +145,9 @@ export default defineConfig(({ mode }) => ({
 function expressPlugin(): Plugin {
   return {
     name: "express-plugin",
-    apply: "serve", // Only apply during development (serve mode)
-    configureServer(server) {
+    apply: "serve",
+    async configureServer(server) {
+      const { createServer } = await import("./server");
       const app = createServer();
 
       // Mount Express app and let it pass through non-API routes to Vite

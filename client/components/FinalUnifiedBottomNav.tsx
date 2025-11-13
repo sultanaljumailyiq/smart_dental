@@ -175,6 +175,9 @@ const SECTION_COLORS = {
   },
 };
 
+import { createPortal } from "react-dom";
+import { useEffect, useState } from "react";
+
 export default function FinalUnifiedBottomNav({
   userRole = null,
   className,
@@ -244,7 +247,10 @@ export default function FinalUnifiedBottomNav({
 
   const activeIndex = getActiveItemIndex();
 
-  return (
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => { setMounted(true); }, []);
+
+  const navContent = (
     <nav
       className={cn(
         "fixed !bottom-0 !left-0 !right-0 !z-[70]",
@@ -254,7 +260,7 @@ export default function FinalUnifiedBottomNav({
       )}
       style={{ position: 'fixed', bottom: 0, left: 0, right: 0, zIndex: 70 }}
     >
-      {/* مؤشر النشاط العلوي */}
+      {/* مؤش�� النشاط العلوي */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gray-200 to-transparent">
         {activeIndex >= 0 && (
           <div
@@ -348,6 +354,13 @@ export default function FinalUnifiedBottomNav({
       )}
     </nav>
   );
+
+  // Render via portal on client to avoid stacking-context issues
+  if (typeof document !== "undefined" && mounted) {
+    return createPortal(navContent, document.body);
+  }
+
+  return navContent;
 }
 
 // مكون مساعد لعرض نقاط الإشعارات
@@ -366,4 +379,3 @@ export function NavBadge({
     </div>
   );
 }
-

@@ -69,7 +69,7 @@ const articleData = {
         <li>اشرب الكثير من الماء</li>
         <li>تناول الأطعمة الغنية بالكالسيوم</li>
         <li>تجنب التدخين</li>
-        <li>قم بزيارة طبيب الأسنان كل 6 أشهر</li>
+        <li>قم بزيارة طبي�� الأسنان كل 6 أشهر</li>
       </ul>
 
       <h2 class="text-2xl font-bold mb-4 mt-8">الخلاصة</h2>
@@ -168,7 +168,7 @@ export default function ArticleDetail() {
   return (
     <div className="min-h-screen bg-gray-50" dir={language === "ar" ? "rtl" : "ltr"}>
       {/* Navigation */}
-      <nav className="bg-white shadow-sm sticky top-0 z-40">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-4">

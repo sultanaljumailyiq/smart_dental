@@ -37,7 +37,7 @@ const groups = [
   {
     id: 1,
     name: "أطباء الأسنان العراقيين",
-    description: "مجتمع لأطباء الأسنان في العراق لتبادل الخبرات والمعرفة",
+    description: "��جتمع لأطباء الأسنان في العراق لتبادل الخبرات والمعرفة",
     members: 2340,
     posts: 156,
     image:
@@ -154,7 +154,7 @@ const recentActivity = [
     type: "question",
     author: "د. أحمد عل��",
     content: "سؤال حول إدارة المريض القلق",
-    timestamp: "منذ 6 ساعات",
+    timestamp: "منذ 6 سا��ات",
     engagement: { likes: 15, comments: 25 },
   },
 ];
@@ -413,7 +413,7 @@ export default function CommunityGroups() {
       dir={language === "ar" ? "rtl" : "ltr"}
     >
       {/* Header */}
-      <div className="sticky top-0 bg-white border-b border-gray-200 z-30">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
